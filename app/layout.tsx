@@ -29,8 +29,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ProductProvider>
           <div className="flex flex-row min-h-screen min-w-full bg-slate-200 text-slate-950">
-            <div className="flex basis-1/6 border-r border-slate-400">
-              <Sidebar/>
+            <div className="flex-fit border-r border-slate-400">
+              <div className="bg-white h-fit sticky top-0">
+                <Sidebar/>
+              </div>
             </div>
             <div className="grow p-4">
               {children}
